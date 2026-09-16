@@ -1,0 +1,1 @@
+web: gunicorn backend_portafolio_2.wsgi

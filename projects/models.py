@@ -8,7 +8,7 @@ class Projects(models.Model):
     PERSONAL = 'Personal'
 
   name = models.CharField(_("Nombre del proyecto"), max_length=100)
-  description = models.CharField(_("Nombre del proyecto"), max_length=250)
+  description = models.CharField(_("Descripción"), max_length=250)
   stack = models.JSONField(
       _("Stack Tecnológico"),
       default=list, 
@@ -17,6 +17,7 @@ class Projects(models.Model):
   )
   order = models.IntegerField(_("Orden"), default=0)
   type_project = models.CharField(
+    _("Tipo del proyecto"),
     max_length=10,
     choices=Type.choices,
     default=Type.WORK,

@@ -19,3 +19,4 @@ class Experience(models.Model):
       blank=True,
       help_text="Stack Tecnológico"
   )
+  order = models.IntegerField(_("Orden"), default=0)

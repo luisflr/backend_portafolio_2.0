@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z4z9*@7k+%4sky_cr6+e@zsu*!u*&37tew29j7dl==+&zcb%rp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*'] 
 
@@ -127,6 +127,10 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Habilitar el almacenamiento optimizado de WhiteNoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+MEDIA_URL = '/media/'
+
+# Carpeta física en tu servidor donde se guardarán los archivos
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

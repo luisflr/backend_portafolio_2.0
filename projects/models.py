@@ -26,4 +26,8 @@ class Projects(models.Model):
     choices=Type.choices,
     default=Type.WORK,
   )
+  platform = models.CharField(_("Plataforma"), max_length=10, default='', blank=True)
+  role = models.CharField(_("Rol"), max_length=50, default='', blank=True)
+  team = models.CharField(_("Equipo"), max_length=50, default='', blank=True)
+  status = models.CharField(_("Estado"), max_length=50, default='', blank=True)
   

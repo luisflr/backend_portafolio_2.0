@@ -18,7 +18,8 @@ class ProjectsSerializer(serializers.ModelSerializer):
       'platform',
       'role',
       'team',
-      'status'
+      'status',
+      'year'
     ]
   
   def get_image(self, obj):

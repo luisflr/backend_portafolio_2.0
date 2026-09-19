@@ -30,4 +30,5 @@ class Projects(models.Model):
   role = models.CharField(_("Rol"), max_length=50, default='', blank=True)
   team = models.CharField(_("Equipo"), max_length=50, default='', blank=True)
   status = models.CharField(_("Estado"), max_length=50, default='', blank=True)
+  year = models.IntegerField(_("Año"), default=0)
   

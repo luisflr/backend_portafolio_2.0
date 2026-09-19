@@ -12,6 +12,7 @@ class ProjectsSerializer(serializers.ModelSerializer):
       'stack',
       'order',
       'image',
+      'image_url',
       'code_url',
       'demo_url',
       'type_project',

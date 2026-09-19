@@ -27,7 +27,15 @@ load_dotenv(BASE_DIR / ".env")
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG")
+DEBUG = os.environ.get("DEBUG", "False") == "True"
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = True
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True          # fuerza HTTPS
+    SESSION_COOKIE_SECURE = True        # cookies solo por HTTPS
+    CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
     "localhost",

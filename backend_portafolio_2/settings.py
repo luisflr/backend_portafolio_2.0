@@ -180,6 +180,7 @@ MEDIA_URL = '/media/'
 # Carpeta física en tu servidor donde se guardarán los archivos
 MEDIA_ROOT = BASE_DIR / 'media'
 
+WHITENOISE_ROOT = MEDIA_ROOT
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

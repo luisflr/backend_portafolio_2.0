@@ -18,6 +18,7 @@ class Projects(models.Model):
   )
   order = models.IntegerField(_("Orden"), default=0)
   image = models.ImageField(upload_to=PROJECTS_IMAGE_UPLOAD_TO, blank=True)
+  image_url = models.CharField(_("URL de la imagen"), max_length=100, default='', blank=True)
   code_url = models.CharField(_("Código del proyecto"), max_length=100, default='', blank=True)
   demo_url = models.CharField(_("URL del proyecto"), max_length=100, default='', blank=True)
   type_project = models.CharField(
